@@ -14,8 +14,9 @@ public class ClientService {
 		if(client == null) throw new IllegalArgumentException("註冊會員時, client物件不得為null");
 		dao.insertClient(client);
 	}
-	public void update(Client client) throws PETException {
-		if(client == null) throw new IllegalArgumentException("修改會員時, client物件不得為null");
+	public void update(Client client) throws PETException{
+		if(client ==null) throw new IllegalArgumentException("修改會員時, client物件不得為null");
 		dao.updateClient(client);
 	}
+	
 }

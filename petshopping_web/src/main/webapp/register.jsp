@@ -18,7 +18,7 @@
 		$("#regForm").attr({ "method" : "post", "autocomplete" : "off", "autofocus" : "autofocus" });
 		$("#id").attr({ "type" : "text", "size" : 90,  "placeholder" : "請輸入ROCID " });
 		$("#id").attr("pattern", "<%=Client.ID_PATTERN%>");
-		$("#password").attr({ "type" : "password", "size" : 90, "placeholder" : "8~12位數密碼" });
+		$("#password").attr({ "type" : "password", "size" : 90, "placeholder" : "6~20位數密碼" });
 		$("#password").attr({"minlength" : <%=Client.MIN_PWD_LENGTH%>});
 		$("#password").attr({"maxlength" : <%=Client.MAX_PWD_LENGTH%>});
 		$("#eye").attr({ "src" : "./images/eye.png", "width" : "10px" }).mousedown(showHandler).mouseleave(hideHandler).mouseup(
