@@ -28,14 +28,27 @@
 		$("#name").attr({"maxlength" : <%=Client.MAX_NAME_LENGTH%>});
 		$("#email").attr({ "type" : "email", "size" : 90, "placeholder" : "電子信箱" });
 		$("#email").attr("pattern", "<%=Client.EMAIL_PATTERN%>");
-		$("#address").attr({ "size" : 28 });
+		$("#address").attr({ "size" : 28 , "maxlength" : 100 ,"placeholder" : "請輸入地址" });		
 		$("#phone").attr({ "type" : "tel","placeholder" : "請輸入手機號碼" });
 		$("#phone").attr({"pattern" : "<%=Client.PHONE_PATTERN%>"});		
 		$("#birthday").attr({ "type" : "date", "max" : "<%=LocalDate.now().minusYears(Client.MIN_AGE)%>" });
 		$("#captCha").attr({ "type" : "text", "size" : 28, "placeholder" : "請輸入下方驗證碼" });
 		$("#captChai").attr({ "src" : url });
 		$("#regGetCV").click(refreshCaptcha);
+		<% if(request.getMethod().equalsIgnoreCase("POST")){%>
+					formRepopulation();
+		<%}%>
 	});
+	function formRepopulation() {
+		$("#id").val("<%=request.getParameter("id")%>");
+		$("#password").val("<%=request.getParameter("password")%>");
+		$("#name").val("<%=request.getParameter("name")%>");
+		$("#email").val("<%=request.getParameter("email")%>");
+		$("#address").val("<%=request.getParameter("address")%>");
+		$("#phone").val("<%=request.getParameter("phone")%>");
+		$("#birthday").val("<%=request.getParameter("birthday")%>");
+		
+	}
 	function showHandler() {
 		$("#password").attr("type", "text");
 	}
@@ -56,10 +69,8 @@
 	</jsp:include>
 	<%@ include file="/subviews/nav.jsp"%>
 	<article>
-		<form id="regForm" action="<%=request.getContextPath()%>/register.do">
-			<fieldset class="userData">
+		<form id="regForm" action="<%=request.getContextPath()%>/register.do">	
 				<p class="errorsList"><%=errorsList != null ? errorsList : ""%></p>
-				<legend>會員基本資料</legend>
 				<p>
 					<label for="id"> 設定帳號：</label><input name="id" id="id" required>
 				</p>
@@ -76,7 +87,7 @@
 					<label for="address"> 地&emsp;&emsp;址：</label><input name="address" id="address"><label for="phone">
 						電&emsp;&emsp;話：</label><input name="phone" id="phone" required /><label for="gender"></label> 性&emsp;&emsp;別：<select name="gender"
 						id="gender" required>
-						<option id="defG" selected disabled>請選擇</option>
+						<option id="defG" selected disabled>請選擇--</option>
 						<option id="male" value='M'>Male</option>
 						<option id="female" value='F'>Female</option>
 						<option id="other" value='O'>Other</option>
@@ -88,15 +99,12 @@
 				<p>
 					<label for="captCha"> 驗&ensp;證&ensp;碼：</label><input name="captCha" id="captCha" required /><br /> <img id="captChai"
 						alt="驗證碼圖片">
-				</p>
-			</fieldset>
-			<fieldset class="udi">
+				</p>		
 				<div id="reUB">
 					<button id="regGetCV">更新驗證碼</button>
 					<button type="reset" id="regReset">重新輸入</button>
 					<button type="submit" id="regSubmit">註冊會員</button>
-				</div>
-			</fieldset>
+				</div>		
 		</form>
 	</article>
 	<%@ include file="/subviews/footer.jsp"%>

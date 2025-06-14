@@ -27,7 +27,7 @@ public class Client{
 		this.setEmail(email);
 	}
 
-	public static final String ID_PATTERN = "^[A-Z][1289][\\d]{8}$";
+	public static final String ID_PATTERN = "^[A-Z][1289][0-9]{8}$";
 
 	public void setId(String id){
 		if(checkId(id))
@@ -134,7 +134,7 @@ public class Client{
 		return Address;
 	}
 
-	public static final String PHONE_PATTERN = "^[\\d]{4}([-]?[\\d]{3}){2}$";
+	public static final String PHONE_PATTERN = "^[0-9]{4}([-]?[0-9]{3}){2}$";
 
 	public void setPhone(String phone){
 		if(phone != null && phone.matches(PHONE_PATTERN))

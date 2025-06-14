@@ -80,7 +80,7 @@ nav {
 article {
 	min-height: 70vh;
 } /**/
-#loginForm, #regForm {
+#loginForm, #regForm, #updateForm {
 	margin-left: 2em; margin-top: 0.5em; margin-right: 2em; border: 1px solid #AAB7F9; border-radius: 5px;
 } /**/
 legend {
@@ -92,10 +92,10 @@ legend {
 #captChai {
 	margin-left: 5.3em; margin-top: 0.5em;
 } /**/
-#reUB, #loUS {
+#reUB, #loUS,#updateUS {
 	text-align: center;
 } /**/
-#regGetCV, #regReset, #regSubmit, #loGCV, #loRes, #loSub, #loFPd {
+#regGetCV, #regReset, #regSubmit, #loGCV, #loRes, #loSub, #loFPd,#updateGetCV,#updateSubmit {
 	font-weight: bold; background: #DCEBCD; cursor: pointer;
 } /**/
 #aftLogin {
