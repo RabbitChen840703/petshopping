@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                               package uuu.petshopping.controller;
+package uuu.petshopping.controller;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

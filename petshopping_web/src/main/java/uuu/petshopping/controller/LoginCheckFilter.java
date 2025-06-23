@@ -15,7 +15,7 @@ import uuu.petshopping.Entity.Client;
 /**
  * Servlet Filter implementation class LoginCheckFilter
  */
-//@WebFilter("/member/*")
+@WebFilter("/member/*")
 public class LoginCheckFilter extends HttpFilter implements Filter{
 	/**
 	 * @see HttpFilter#HttpFilter()
