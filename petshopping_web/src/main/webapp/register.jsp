@@ -28,8 +28,8 @@
 		$("#name").attr({"maxlength" : <%=Client.MAX_NAME_LENGTH%>});
 		$("#email").attr({ "type" : "email", "size" : 90, "placeholder" : "電子信箱" });
 		$("#email").attr("pattern", "<%=Client.EMAIL_PATTERN%>");
-		$("#address").attr({ "size" : 28 , "maxlength" : 100 ,"placeholder" : "請輸入地址" });		
-		$("#phone").attr({ "type" : "tel","placeholder" : "請輸入手機號碼" });
+		$("#address").attr({ "size" : 35 , "maxlength" : 100 ,"placeholder" : "請輸入地址" });		
+		$("#phone").attr({ "type" : "tel","size" : 12 , "placeholder" : "請輸入手機號碼" });
 		$("#phone").attr({"pattern" : "<%=Client.PHONE_PATTERN%>"});		
 		$("#birthday").attr({ "type" : "date", "max" : "<%=LocalDate.now().minusYears(Client.MIN_AGE)%>" });
 		$("#captCha").attr({ "type" : "text", "size" : 28, "placeholder" : "請輸入下方驗證碼" });
