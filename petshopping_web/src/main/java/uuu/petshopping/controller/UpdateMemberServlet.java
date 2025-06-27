@@ -33,7 +33,7 @@ public class UpdateMemberServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		List<String> errorsList = new ArrayList<>();
 		HttpSession session = request.getSession();
-		Client member = (Client) session.getAttribute("member");
+		Client member = (Client) session.getAttribute("member");// 更新前的member
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
 		String newPwd = request.getParameter("newPwd");
