@@ -65,7 +65,10 @@
 		$("#phone").val("<%=request.getParameter("phone")%>");
 		$("#birthday").val("<%=request.getParameter("birthday")%>");	
 	}
+	
+	
 	<%List<String> errorsList = (List<String>) session.getAttribute("errorsList");%>
+	
 </script>
 </head>
 <body>

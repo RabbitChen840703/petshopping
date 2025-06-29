@@ -1,3 +1,7 @@
+<%@page import="uuu.petshopping.Entity.SpecialOffer"%>
+<%@page import="uuu.petshopping.Entity.Product"%>
+<%@page import="java.util.List"%>
+<%@page import="uuu.petshopping.Service.ProductsService"%>
 <%@ page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -5,17 +9,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="<%=request.getContextPath()%>/images/chicken.png">
-<title>毛 孩 糧 倉-產品清單</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/petsh.css">
-<style>
-</style>
+<script type="text/javascript" src="<%=request.getContextPath()%>/JavaScript/jquery.js"></script>
+<title>毛 孩 糧 倉-產品清單</title>
+<% ProductsService pService = new ProductsService();
+		List<Product> pList = null;
+		pList = pService.getAllProducts();
+		%>
+
 </head>
 <body>
 	<jsp:include page="subviews/header.jsp">
 		<jsp:param value="產品清單" name="subHeader" />
 	</jsp:include>
 	<%@ include file="/subviews/nav.jsp"%>
-	<article></article>
+	<article>
+		<% if (pList==null || pList.size()==0) { %>
+		<h3>查無產品資料</h3>
+		<% } else { %>
+		<div class="productsList">
+			<% for(int i=0;i<pList.size();i++) { 
+							Product product = pList.get(i);%>
+					<div class="productItem">
+						<img src="<%=product.getPhotoUrl() %>"/>
+						<h4><a href="product_detail.jsp?productId=<%=product.getId()%>"><%=product.getName() %></a></h4>
+						<div>優惠價:<%=product instanceof SpecialOffer ? ((SpecialOffer)product).getDiscountString() : "" %>
+							<%=product.getUnitPrice() %>元(<%=product.getStock()%>)
+						</div>
+					</div>
+			<% } %>
+		</div>
+		<% } %>
+	</article>
 	<%@ include file="/subviews/footer.jsp"%>
 </body>
 </html>

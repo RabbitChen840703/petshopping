@@ -38,7 +38,7 @@ public class Product{
 		return name;
 	}
 	public void setName(String name){
-		if(name != null && MIN_NAME_LENGTH < (name = name.trim()).length() && (name = name.trim()).length() >= MAX_NAME_LENGTH)
+		if(name != null && MIN_NAME_LENGTH < (name = name.trim()).length() && (name = name.trim()).length() <= MAX_NAME_LENGTH)
 			this.name = name;
 		else{
 			String errMsg = String.format("產品名稱必須%d~%d字元間: %s\n", MIN_NAME_LENGTH, MAX_NAME_LENGTH);
