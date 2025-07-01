@@ -16,7 +16,6 @@
 		List<Product> pList = null;
 		pList = pService.getAllProducts();
 		%>
-
 </head>
 <body>
 	<jsp:include page="subviews/header.jsp">
@@ -24,22 +23,22 @@
 	</jsp:include>
 	<%@ include file="/subviews/nav.jsp"%>
 	<article>
-		<% if (pList==null || pList.size()==0) { %>
-		<h3>查無產品資料</h3>
-		<% } else { %>
-		<div class="productsList">
-			<% for(int i=0;i<pList.size();i++) { 
-							Product product = pList.get(i);%>
-					<div class="productItem">
-						<img src="<%=product.getPhotoUrl() %>"/>
-						<h4><a href="product_detail.jsp?productId=<%=product.getId()%>"><%=product.getName() %></a></h4>
-						<div>優惠價:<%=product instanceof SpecialOffer ? ((SpecialOffer)product).getDiscountString() : "" %>
-							<%=product.getUnitPrice() %>元(<%=product.getStock()%>)
-						</div>
+		<%if(pList == null || pList.size()==0){ %>
+			<h3>查無產品資訊</h3>
+		<%} else { %>
+			<div class="productsList">	
+				<%for(int i=0;i<pList.size();i++){
+						Product product = pList.get(i);%>
+				<div class="productItem">						
+					<img src="<%=product.getPhotoUrl()%>"/>
+					<h4><a href="product_detail.jsp?productId=<%=product.getId()%>"><%=product.getName() %></a></h4>
+					<div>優惠價:<%= product instanceof SpecialOffer ? ((SpecialOffer)product).getDiscountString() :  "" %>
+							<%=product.getUnitPrice() %>元(<%=product.getStock() %>)
 					</div>
-			<% } %>
-		</div>
-		<% } %>
+				</div>	
+				<% } %>													
+			</div>	
+		<%} %>
 	</article>
 	<%@ include file="/subviews/footer.jsp"%>
 </body>
