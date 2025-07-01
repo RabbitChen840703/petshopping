@@ -11,4 +11,10 @@ public class ProductsService{
 	public List<Product> getProductsByKeyword(String keyword) throws PETException{
 		return pDAO.selectProductsByKeyword(keyword);
 	}
+	public List<Product> getProductsByCategory(String category) throws PETException{
+		return pDAO.selectProductsByCategory(category);
+	}
+	public List<Product> getLatestArrivalProducts()throws PETException{
+		return pDAO.selectLatestArrivalProducts();
+	}
 }
