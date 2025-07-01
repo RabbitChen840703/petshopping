@@ -12,9 +12,15 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/petsh.css">
 <script type="text/javascript" src="<%=request.getContextPath()%>/JavaScript/jquery.js"></script>
 <title>毛 孩 糧 倉-產品清單</title>
-<% ProductsService pService = new ProductsService();
+<% 
+		String keyword = request.getParameter("keyword");
+		ProductsService pService = new ProductsService();
 		List<Product> pList = null;
-		pList = pService.getAllProducts();
+		if( keyword != null && (keyword=keyword.trim()).length()>0){
+			pList = pService.getProductsByKeyword(keyword);
+		}else{
+			pList = pService.getAllProducts();
+		}	
 		%>
 </head>
 <body>

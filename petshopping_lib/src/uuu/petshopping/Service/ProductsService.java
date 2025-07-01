@@ -8,4 +8,7 @@ public class ProductsService{
 	public List<Product> getAllProducts() throws PETException{
 		return pDAO.selectAllProducts();
 	}
+	public List<Product> getProductsByKeyword(String keyword) throws PETException{
+		return pDAO.selectProductsByKeyword(keyword);
+	}
 }

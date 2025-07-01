@@ -65,16 +65,16 @@ header {
 nav {
 	width: auto; padding-left: 30px; margin-top: 10px; margin-bottom: 10px;
 } /**/
-#toIndex, #toProduct, #toSignin, #toRegister, #toAlterUser, #toLogout {
+#toIndex, #toProducts, #toSignin, #toRegister, #toAlterUser, #toLogout {
 	text-decoration: none; color: black;
 } /**/
-#toProduct:visited, #toSignin:visited, #toRegister:visited, #toAlterUser:visited, #toLogout:visited {
+#toProducts:visited, #toSignin:visited, #toRegister:visited, #toAlterUser:visited, #toLogout:visited {
 	color: #F5CE9B;
 } /**/
-#toIndex:active, #toProduct:active, #toSignin:active, #toRegister:active, #toAlterUser:active, #toLogout:active {
+#toIndex:active, #toProducts:active, #toSignin:active, #toRegister:active, #toAlterUser:active, #toLogout:active {
 	color: #BDE16B;
 } /**/
-#toIndex:hover, #toProduct:hover, #toSignin:hover, #toRegister:hover, #toAlterUser:hover, #toLogout:hover {
+#toIndex:hover, #toProducts:hover, #toSignin:hover, #toRegister:hover, #toAlterUser:hover, #toLogout:hover {
 	color: #EADF79;
 } /**/
 article {

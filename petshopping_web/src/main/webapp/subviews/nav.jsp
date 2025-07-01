@@ -2,7 +2,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <!-- nav.jsp start -->
 <nav>
-	<a id="toProduct" href="<%=request.getContextPath()%>/products_list.jsp"> 找飯飯 </a>&nbsp;|
+	<a id="toProducts" href="<%=request.getContextPath()%>/products_list.jsp"> 找飯飯 </a>&nbsp;|
 	<%Client member = (Client) session.getAttribute("member"); %>
 	<% if(member == null) {%>
 		<a id="toSignin" href="<%=request.getContextPath()%>/login.jsp"> 登入會員 </a>&nbsp;|
