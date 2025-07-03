@@ -17,4 +17,7 @@ public class ProductsService{
 	public List<Product> getLatestArrivalProducts()throws PETException{
 		return pDAO.selectLatestArrivalProducts();
 	}
+	public Product getProductById(String productId)throws PETException{
+		return pDAO.selectProductById(productId);
+	}
 }

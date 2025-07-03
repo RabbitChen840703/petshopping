@@ -65,9 +65,9 @@ header {
 nav {
 	width: auto; padding-left: 30px; margin-top: 10px; margin-bottom: 10px;
 } /**/
-.navCategory{
+.navCategory {
 	text-align: center;
-}/**/
+} /**/
 #toIndex, #toProducts, #toSignin, #toRegister, #toAlterUser, #toLogout {
 	text-decoration: none; color: black;
 } /**/
@@ -117,6 +117,21 @@ legend {
 .productItem h4 {
 	margin: 1ex;
 } /**/
+.prdocutRegion {
+	width: 85%; margin: auto;
+} /**/
+.productPhoto {
+	vertical-align: top; width: 45%; max-width: 300px;
+} /**/
+.productData {
+	display: inline-block;
+} /**/
+.unitPrice, .discount {
+	color: red;
+} /**/
+.productDesc{
+	width:85%; margin: auto;
+}/**/
 footer {
 	text-align: center;
 } /**/

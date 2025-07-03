@@ -15,7 +15,9 @@
 		<jsp:param value="產品資訊" name="subHeader" />
 	</jsp:include>
 	<%@ include file="/subviews/nav.jsp"%>
-	<article></article>
+	<article>
+		<%@ include file="/product_data.jsp" %>
+	</article>
 	<%@include file="/subviews/footer.jsp"%>
 </body>
 </html>

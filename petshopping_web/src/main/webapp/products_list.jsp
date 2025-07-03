@@ -50,7 +50,7 @@
 						Product product = pList.get(i);%>
 				<div class="productItem">						
 					<img src="<%=product.getPhotoUrl()%>"/>
-					<h4><a href="product_detail.jsp?productId=<%=product.getId()%>"><%=product.getName() %></a></h4>
+					<h4><a href="product_detail_v1.jsp?productId=<%=product.getId()%>"><%=product.getName() %></a></h4>
 					<div>優惠價:<%= product instanceof SpecialOffer ? ((SpecialOffer)product).getDiscountString() :  "" %>
 							<%=product.getUnitPrice() %>元(<%=product.getStock() %>)
 					</div>
