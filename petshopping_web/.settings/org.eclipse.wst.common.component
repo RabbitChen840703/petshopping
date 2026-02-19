@@ -1,20 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-        
-    <wb-module deploy-name="petshopping_web">
-                
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                
-        <dependent-module archiveName="petshopping_lib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petshopping_lib/petshopping_lib">
-                        
-            <dependency-type>uses</dependency-type>
-                    
-        </dependent-module>
-                
-        <property name="java-output-path" value="/petshopping_web/build/classes"/>
-        <property name="context-root" value="petshopping"/>
-            
-    </wb-module>
+                                        
     
+    
+    
+    
+    
+    
+    
+    
+    <wb-module deploy-name="petshopping_web">
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="petshopping_lib.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/petshopping_lib/petshopping_lib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                                                                                
+        
+        
+        
+        
+        
+        
+        
+        
+        <property name="java-output-path" value="/petshopping_web/build/classes"/>
+                                                                        
+        
+        
+        
+        
+        
+        
+        
+        <property name="context-root" value="petshopping"/>
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    </wb-module>
+                                    
+
+
+
+
+
+
+
+
 </project-modules>
